@@ -29,5 +29,10 @@ return {
             'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
             'MunifTanjim/nui.nvim',
         },
-    }
+        config = function()
+            vim.keymap.set('n', '<leader>ee', ':Neotree<CR>', { desc = 'Neotree: focus', silent = true })
+            vim.keymap.set('n', '<leader>et', ':Neotree toggle<CR>', { desc = 'Neotree: toggle', silent = true })
+        end
+    },
+    { 'tpope/vim-fugitive' },
 }
