@@ -15,6 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup('huynd.plugins')
+require("huynd.after")
 --]]
 
 --[[ 

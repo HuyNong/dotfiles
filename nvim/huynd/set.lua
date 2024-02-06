@@ -1,5 +1,7 @@
 vim.g.mapleader = ' '
 
+local bind = vim.keymap.set
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -14,3 +16,6 @@ vim.opt.wrap = false
 
 -- vim.opt.hlsearch = false
 vim.opt.incsearch = true
+
+bind("n", "<C-d>", "<C-d>zz<CR>")
+bind("n", "<C-u>", "<C-u>zz<CR>")
