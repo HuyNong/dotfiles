@@ -1,5 +1,5 @@
-return {}
---[[ return {
+-- return {}
+return {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
@@ -40,4 +40,4 @@ return {}
             },
         })
     end
-} ]]
+}
