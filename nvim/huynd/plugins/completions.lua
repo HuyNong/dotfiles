@@ -41,8 +41,8 @@ return {
                     priority_weight = 2,
                     comparators = {
                         require "cmp_tabnine.compare",
-                        compare.offset,
                         compare.exact,
+                        compare.offset,
                         compare.score,
                         compare.recently_used,
                         compare.kind,

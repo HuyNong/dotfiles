@@ -34,5 +34,11 @@ return {
             vim.keymap.set('n', '<leader>et', ':Neotree toggle<CR>', { desc = 'Neotree: toggle', silent = true })
         end
     },
-    { 'tpope/vim-fugitive' },
+    {
+        'tpope/vim-fugitive',
+        config = function()
+            vim.keymap.set('n', '<leader>gg', ':G<CR>', { desc = 'Git: open change', silent = true })
+            vim.keymap.set('n', '<leader>gp', ':Git push<CR>', { desc = 'Git: push', silent = true })
+        end
+    },
 }
