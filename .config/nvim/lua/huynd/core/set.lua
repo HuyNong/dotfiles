@@ -14,3 +14,8 @@ vim.opt.wrap = false
 
 -- vim.opt.hlsearch = false
 vim.opt.incsearch = true
+
+-- Highlight current line
+vim.cmd[[set cursorline]]
+-- Set the background color for the cursor line
+vim.cmd[[hi CursorLine guibg=#282c34 ctermbg=235]]
