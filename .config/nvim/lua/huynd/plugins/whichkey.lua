@@ -11,7 +11,7 @@ return {
       ["<leader>c"] = { name = "+code" },
       ["<leader>f"] = { name = "+file/find" },
       ["<leader>g"] = { name = "+git" },
-      ["<leader>e"] = { name = "+expolorer" },
+      ["<leader>e"] = { name = "+explorer" },
     },
   },
   config = function(_, opts)
