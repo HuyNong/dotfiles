@@ -12,3 +12,6 @@ bind('n', '<C-l>', '<CMD>wincmd l<CR>', { silent = true })
 bind('n', '<leader>bc', '<CMD>%bd!<CR>', { silent = true })
 
 bind('x', 'Y', '"+y<CR>', { noremap = true, silent = true })
+
+bind('n', '<A-k>', 'ddkP', { noremap = true, silent = true, desc = 'Vim: move line up'})
+bind('n', '<A-j>', 'ddp', { noremap = true, silent = true, desc = 'Vim: move line down'})
