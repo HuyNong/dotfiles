@@ -55,21 +55,6 @@ return {
     end,
   },
   {
-    "voldikss/vim-floaterm",
-    config = function()
-      vim.keymap.set(
-        "n",
-        "<leader>tf",
-        "<CMD>FloatermNew --height=0.8 --width=0.8 --wintype=float --name=terminal --position=center<CR>",
-        { desc = "Term: New float terminal" }
-      )
-      vim.keymap.set("t", "<leader>tn", "<CMD>FloatermNext<CR>", { desc = "Term: Next terminal" })
-      vim.keymap.set("t", "<leader>tp", "<CMD>FloatermPrev<CR>", { desc = "Term: Prev terminal" })
-      vim.keymap.set("t", "<A-i>", "<CMD>FloatermToggle<CR>", { desc = "Term: Toggle" })
-      vim.keymap.set("n", "<A-i>", "<CMD>FloatermToggle<CR>", { desc = "Term: Toggle" })
-    end,
-  },
-  {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
     opts = {},
@@ -88,8 +73,8 @@ return {
   },
   {
     "brenoprata10/nvim-highlight-colors",
-    config = function ()
-      require('nvim-highlight-colors').setup({})
-    end
+    config = function()
+      require("nvim-highlight-colors").setup({})
+    end,
   },
 }
