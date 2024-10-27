@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "html", "cssls", "tsserver", "intelephense", "php-cs-fixer", "gopls" },
+        ensure_installed = { "lua_ls", "html", "cssls", "ts_ls", "intelephense", "php-cs-fixer", "gopls", "tailwindcss" },
       })
     end,
   },
@@ -19,7 +19,7 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local lsp = require("lspconfig")
-      local servers = { "lua_ls", "html", "cssls", "tsserver", "intelephense" }
+      local servers = { "lua_ls", "html", "cssls", "ts_ls", "intelephense", "tailwindcss" }
       local util = require("lspconfig/util")
 
       for _, s in ipairs(servers) do
@@ -41,10 +41,10 @@ return {
         },
       })
 
-      vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "LSP: open diagnostic" })
+      vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "LSP: open diagnostic" })
       vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "LSP: goto previous diagnostic" })
       vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "LSP: goto next diagnostic" })
-      vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "LSP: set location list" })
+      vim.keymap.set("n", "<leader>ld", vim.diagnostic.setloclist, { desc = "LSP: list diagnostic"})
 
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -59,7 +59,7 @@ return {
             { buffer = ev.buf, desc = "LSP: type declearation" }
           )
           vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = ev.buf, desc = "LSP: definition" })
-          vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = ev.buf, desc = "LSP: hover" })
+          vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = ev.buf, desc = "LSP: show hover info" })
           vim.keymap.set(
             "n",
             "gi",
@@ -127,4 +127,12 @@ return {
       })
     end,
   },
+  {
+    "luckasRanarison/tailwind-tools.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {},
+    config = function()
+      require("tailwind-tools").setup({})
+    end
+  }
 }

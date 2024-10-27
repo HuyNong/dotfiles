@@ -5,6 +5,7 @@ return {
         "hrsh7th/nvim-cmp",
         config = function()
             local cmp = require "cmp"
+            local compare = require "cmp.config.compare"
             require("luasnip.loaders.from_vscode").load {}
 
             cmp.setup {
@@ -33,10 +34,6 @@ return {
                     { name = "buffer" },
                     { name = "cmp_tabnine" },
                 },
-            }
-
-            local compare = require "cmp.config.compare"
-            require("cmp").setup {
                 sorting = {
                     priority_weight = 2,
                     comparators = {

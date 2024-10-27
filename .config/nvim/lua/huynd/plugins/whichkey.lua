@@ -1,18 +1,23 @@
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
+  dependencies = {
+    'echasnovski/mini.icons'
+  },
   opts = {
     plugins = { spelling = true },
     defaults = {
-      mode = { "n", "v" },
-      ["g"] = { name = "+goto" },
-      ["]"] = { name = "+next" },
-      ["["] = { name = "+prev" },
-      ["<leader>c"] = { name = "+code" },
-      ["<leader>f"] = { name = "+file/find" },
-      ["<leader>g"] = { name = "+git" },
-      ["<leader>e"] = { name = "+explorer" },
-    },
+      {
+        mode = { "n", "v" },
+        { "", group = "explorer" },
+        { "", group = "code" },
+        { "", group = "file/find" },
+        { "", group = "next" },
+        { "", group = "goto" },
+        { "", group = "prev" },
+        { "", group = "git" },
+      },
+    }
   },
   config = function(_, opts)
     local wk = require("which-key")

@@ -72,13 +72,19 @@ return {
       vim.keymap.set("n", "<leader>z", "<CMD>ZenMode<CR>", { desc = "ZenMode: toggle" })
     end,
   },
-  {
-    "folke/twilight.nvim",
-  },
+  -- {
+  --   "folke/twilight.nvim",
+  -- },
   {
     "brenoprata10/nvim-highlight-colors",
     config = function()
       require("nvim-highlight-colors").setup({})
     end,
+  },
+  {
+    "MunifTanjim/prettier.nvim",
+    config = function()
+      require("prettier").setup()
+    end
   },
 }
