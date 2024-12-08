@@ -1,9 +1,9 @@
 [window]
 decorations="None"
 padding= { x=5, y=10 }
-opacity = 0.9
+opacity = 0.98
 blur=true
 startup_mode="Maximized"
 
 [font]
-normal= { family = "JetBrainsMonoNerdFont", style = "Regular" }
+normal= { family = "JetBrainsMonoNerdFont", style = "Bold" }

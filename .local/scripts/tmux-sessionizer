@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
-	selected=$(find ~/Work/source-code/ /var/www/html/ ~/.config/ -mindepth 1 -maxdepth 4 -type d | fzf-tmux -p --reverse)
+	selected=$(find ~/work/emddi/projects/ ~/work/gsm/projects/ ~/personal/code/ -mindepth 1 -maxdepth 4 -type d | fzf-tmux -p --reverse)
 fi
 
 if [[ -z $selected ]]; then

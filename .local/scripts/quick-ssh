@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Work/ssh/scripts/ ~/scripts/ -type f | fzf-tmux -p --reverse)
+    selected=$(find ~/work/emddi/ssh/ -type f | fzf-tmux -p --reverse)
 fi
 
 if [[ -z $selected ]]; then
