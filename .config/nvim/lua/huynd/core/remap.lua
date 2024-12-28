@@ -10,6 +10,7 @@ bind('n', '<C-k>', '<CMD>wincmd k<CR>', { silent = true })
 bind('n', '<C-h>', '<CMD>wincmd h<CR>', { silent = true })
 bind('n', '<C-l>', '<CMD>wincmd l<CR>', { silent = true })
 bind('n', '<leader>bc', '<CMD>%bd!<CR>', { silent = true })
+bind('n', '<leader>qc', ':cclose<CR>', { noremap = true, silent = true, desc = 'Close quick fix list' })
 
 bind('x', 'Y', '"+y<CR>', { noremap = true, silent = true })
 
