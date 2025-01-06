@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+# script require `fzf` package, please install it first
+
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
-	selected=$(find ~/work/emddi/projects/ ~/work/gsm/projects/ ~/personal/code/ -mindepth 1 -maxdepth 4 -type d | fzf-tmux -p --reverse)
+	selected=$(find ~/work/emddi/ ~/personal/code/ -mindepth 1 -maxdepth 4 -type d | fzf-tmux -p --reverse)
 fi
 
 if [[ -z $selected ]]; then
